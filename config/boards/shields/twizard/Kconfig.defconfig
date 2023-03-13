@@ -3,6 +3,4 @@ if SHIELD_TWIZARD
 config ZMK_KEYBOARD_NAME
     default "twizard"
 
-CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
-
 endif
