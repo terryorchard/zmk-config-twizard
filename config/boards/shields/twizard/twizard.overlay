@@ -14,8 +14,8 @@
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
-        a-gpios = <PIN_15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <PIN_14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
         status = "okay";
     };
@@ -23,8 +23,8 @@
     right_encoder: encoder_right {
         compatible = "alps,ec11";
         label = "RIGHT_ENCODER";
-        a-gpios = <PIN_16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <PIN_10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
         status = "okay";
     };
