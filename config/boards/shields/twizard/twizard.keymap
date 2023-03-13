@@ -47,9 +47,9 @@
 
         bt_layer {
             bindings = <
-                &bootloader     &none           &kp UP          &none           &none                   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
+                &none           &none           &kp UP          &none           &none                   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &none                   &kp PIPE        &kp AMPS        &kp ASTRK       &kp LBRC        &kp RBRC
-                &bootloader     &none           &bt BT_CLR      &none           &none                   &none           &none           &bt BT_CLR      &kp none        &bootloader
+                &bootloader     &none           &bt BT_CLR      &none           &none                   &none           &none           &bt BT_CLR      &none           &bootloader
                                 &kp TAB         &kp BSPC        &kp DEL         &trans                  &trans          &kp ENTER       &kp SPACE       &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
