@@ -10,17 +10,17 @@
 
 / {
     behaviors {
-        bhm: balanced_homerow_mods {
+        hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -70,7 +70,7 @@
                 &none           &none           &kp UP          &none           &kp KP_NUM              &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MINUS
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &none                   &kp KP_MULTIPLY &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS
                 &bootloader     &none           &bt BT_CLR      &none           &none                   &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_ENTER
-                                &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp LALT        &kp KP_DOT      &kp COLON
+                                &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp KP_DOT      &kp KP_DOT      &kp COLON
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
