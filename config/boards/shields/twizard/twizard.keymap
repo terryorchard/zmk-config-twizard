@@ -20,7 +20,7 @@
                 &lt 2 Z         &kp X           &kp C           &kp V           &kp B                   &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH
                                 &kp TAB         &lt 1 BSPC      &lt 3 DEL       &mo 3                   &kp C_PLAY      &lt 3 ENTER     &lt 2 SPACE     &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         fun_layer {
@@ -30,7 +30,7 @@
                 &kp F1          &kp F12         &kp PIPE        &none           &none                   &kp TILDE       &kp UNDER       &kp PLUS        &kp LBKT        &kp RBKT
                                 &kp TAB         &kp BSPC        &kp DEL         &trans                  &kp C_PLAY      &kp ENTER       &kp SPACE       &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         nav_layer {
@@ -40,7 +40,7 @@
                 &kp LSHFT       &kp LBKT        &kp RBKT        &kp PG_DN       &kp END					&kp GRAVE       &kp MINUS       &kp EQUAL       &kp COLON       &kp SEMI
                                 &kp TAB         &kp BSPC        &kp DEL         &trans                  &kp C_PLAY      &kp ENTER       &kp SPACE       &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };		
 
 
@@ -51,7 +51,7 @@
                 &kp Z           &kp X           &kp C           &kp V           &kp B                   &bootloader     &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR
                                 &kp TAB         &kp BSPC        &kp DEL         &trans                  &kp C_PLAY      &kp ENTER       &kp SPACE       &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
