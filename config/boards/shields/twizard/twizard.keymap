@@ -8,7 +8,7 @@
 #define EXT     3
 #define NUM     4
 
-&mt { tapping-term-ms = <200>; };
+&mt { tapping-term-ms = <250>; };
 
 / {
     keymap {
@@ -31,7 +31,7 @@
                 &kp F1          &kp F12         &kp PIPE        &kp PSCRN       &kp LC(PSCRN)           &kp TILDE       &kp UNDER       &kp PLUS        &kp LBKT        &kp RBKT
                                 &kp TAB         &kp BSPC        &kp DEL         &trans                  &trans          &kp ENTER       &kp SPACE       &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         nav_layer {
@@ -52,7 +52,7 @@
                 &bootloader     &none           &bt BT_CLR      &none           &none                   &none           &none           &bt BT_CLR      &none           &bootloader
                                 &kp TAB         &kp BSPC        &kp DEL         &trans                  &trans          &kp ENTER       &kp SPACE       &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         num_layer {
