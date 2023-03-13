@@ -1,0 +1,6 @@
+if SHIELD_TWIZARD
+
+config ZMK_KEYBOARD_NAME
+    default "twizard"
+
+endif
