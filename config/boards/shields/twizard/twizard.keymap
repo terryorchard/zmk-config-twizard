@@ -57,7 +57,7 @@
 
         num_layer {
             bindings = <
-                &none           &none           &kp UP          &none           &KP_NUM                 &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MINUS
+                &none           &none           &kp UP          &none           &kp KP_NUM              &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MINUS
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &none                   &kp KP_MULTIPLY &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS
                 &bootloader     &none           &bt BT_CLR      &none           &none                   &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_ENTER
                                 &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp LALT        &kp KP_DOT      &kp COLON
