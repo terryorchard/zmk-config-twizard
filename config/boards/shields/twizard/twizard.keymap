@@ -1,7 +1,8 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
+#define TTERM   500
 #define DEFAULT 0
 #define FUN     1
 #define NAV     2
@@ -9,7 +10,7 @@
 #define NUM     4
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <TTERM>;
 };
 
 / {
@@ -18,7 +19,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <TTERM>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -28,7 +29,7 @@
             label = "GLOBAL_QUICK_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <TTERM>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -79,7 +80,7 @@
                 &lt NAV Z       &kp X           &kp C           &kp V           &kp B                   &kp N           &kp M           &kp COMMA       &kp DOT         &lt NUM FSLH
                                 &kp TAB         &lt FUN BSPC    &lt EXT DEL     &to NUM                 &kp C_PLAY      &lt EXT ENTER   &lt NAV SPACE   &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         fun_layer {
@@ -103,11 +104,11 @@
         };		
 
 
-        bt_layer {
+        ext_layer {
             bindings = <
-                &none           &none           &kp UP          &none           &none                   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
-                &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &none                   &kp PIPE        &kp AMPS        &kp ASTRK       &kp LBRC        &kp RBRC
-                &bootloader     &none           &bt BT_CLR      &none           &none                   &none           &none           &bt BT_CLR      &none           &bootloader
+                &bootloader     &none           &kp UP          &none           &kp INSERT              &none           &none           &none           &none           &bootloader
+                &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PAUSE_BREAK         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
+                &BT_CLR         &none           &none           &none           &kp SCROLLLOCK          &kp RG(L)       &none           &none           &none           &BT_CLR
                                 &kp TAB         &kp BSPC        &kp DEL         &trans                  &trans          &kp ENTER       &kp SPACE       &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -117,10 +118,10 @@
             bindings = <
                 &none           &none           &kp UP          &none           &kp KP_NUM              &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MINUS
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &none                   &kp KP_MULTIPLY &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS
-                &bootloader     &none           &bt BT_CLR      &none           &none                   &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_ENTER
-                                &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp KP_DOT      &kp KP_DOT      &kp COLON
+                &bootloader     &none           &none           &none           &none                   &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_ENTER
+                                &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp KP_DOT      &kp LALT        &kp COLON
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
