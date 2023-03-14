@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -24,13 +24,50 @@
             label = "GLOBAL_QUICK_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
     };
+    &mt {
+        tapping-term-ms = <300>;
+    };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_LBRC {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp LBRC>;
+        };
+        combo_RBRC {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp RBRC>;
+        };
+        combo_LPAR {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LPAR>;
+        };
+        combo_RPAR {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RPAR>;
+        };
+        combo_LBKT {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp LBKT>;
+        };
+        combo_RBKT {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp RBKT>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
