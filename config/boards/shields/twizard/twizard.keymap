@@ -2,17 +2,14 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define TTERM   300
+#define TTERM   200
 #define DEFAULT 0
 #define FUN     1
 #define NAV     2
 #define EXT     3
 #define NUM     4
 
-&mt {
-    tapping-term-ms = <TTERM>;
-};
-
+&mt { tapping-term-ms = <TTERM>; };
 / {
     behaviors {
         hm: homerow_mods {
@@ -66,11 +63,11 @@
         default_layer {
             bindings = <
                 &kp Q           &kp W           &kp E           &kp R           &kp T                   &kp Y           &kp U           &kp I           &kp O           &kp P
-                &mt LGUI A      &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G                   &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &mt RGUI SQT
+                &kp A           &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G                   &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &mt RGUI SQT
                 &lt NAV Z       &kp X           &kp C           &kp V           &kp B                   &kp N           &kp M           &kp COMMA       &kp DOT         &lt NUM FSLH
                                 &kp TAB         &lt FUN BSPC    &lt EXT DEL     &to NUM                 &kp C_PLAY      &lt EXT ENTER   &lt NAV SPACE   &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         fun_layer {
