@@ -8,6 +8,10 @@
 #define EXT     3
 #define NUM     4
 
+&mt {
+    tapping-term-ms = <300>;
+};
+
 / {
     behaviors {
         bhm: balanced_homerow_mods {
@@ -29,9 +33,6 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-    };
-    &mt {
-        tapping-term-ms = <300>;
     };
 
     combos {
