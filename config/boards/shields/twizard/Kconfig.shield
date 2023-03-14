@@ -1,2 +1,2 @@
 config SHIELD_TWIZARD
-    def_bool $(shields_list_contains, twizard)
+    def_bool $(shields_list_contains,twizard)
