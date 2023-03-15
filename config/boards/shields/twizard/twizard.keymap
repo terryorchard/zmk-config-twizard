@@ -22,60 +22,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
-    combos {
-        compatible = "zmk,combos";
-        combo_LBRC {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&kp LBRC>;
-        };
-        combo_RBRC {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            bindings = <&kp RBRC>;
-        };
-        combo_LPAR {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp LPAR>;
-        };
-        combo_RPAR {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RPAR>;
-        };
-        combo_LBKT {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp LBKT>;
-        };
-        combo_RBKT {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp RBKT>;
-        };
-        combo_PREV {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp C_PREV>;
-        };
-        combo_NEXT {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp C_NEXT>;
-        };
-        combo_MINUS {
-            timeout-ms = <50>;
-            key-positions = <5 15>;
-            bindings = <&kp MINUS>;
-        };
-        combo_UNDER {
-            timeout-ms = <50>;
-            key-positions = <15 25>;
-            bindings = <&kp UNDER>;
-        };
-    };
     
     keymap {
         compatible = "zmk,keymap";
@@ -129,6 +75,70 @@
                                 &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp KP_DOT      &kp LALT        &kp COLON
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_LBRC {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp LBRC>;
+        };
+        combo_RBRC {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp RBRC>;
+        };
+        combo_LPAR {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LPAR>;
+        };
+        combo_RPAR {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RPAR>;
+        };
+        combo_LBKT {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp LBKT>;
+        };
+        combo_RBKT {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp RBKT>;
+        };
+        combo_PREV {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp C_PREV>;
+        };
+        combo_NEXT {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp C_NEXT>;
+        };
+        combo_MINUS {
+            timeout-ms = <50>;
+            key-positions = <5 15>;
+            bindings = <&kp MINUS>;
+        };
+        combo_UNDER {
+            timeout-ms = <50>;
+            key-positions = <15 25>;
+            bindings = <&kp UNDER>;
+        };
+        combo_SEMI {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp SEMI>;
+        };
+        combo_COLON {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp COLON>;
         };
     };
 };
