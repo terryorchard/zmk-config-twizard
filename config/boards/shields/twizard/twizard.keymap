@@ -29,9 +29,9 @@
         default_layer {
             bindings = <
                 &kp Q           &kp W           &kp E           &kp R           &kp T                   &kp Y           &kp U           &kp I           &kp O           &kp P
-                &kp A           &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G                   &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &mt RGUI SQT
+                &kp A           &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G                   &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &kp SQT
                 &lt NAV Z       &kp X           &kp C           &kp V           &kp B                   &kp N           &kp M           &kp COMMA       &kp DOT         &lt NUM FSLH
-                                &kp TAB         &lt FUN BSPC    &lt EXT DEL     &to NUM                 &kp C_PLAY      &lt EXT ENTER   &lt NAV SPACE   &kp ESC
+                                &mt LGUI TAB    &mt LSHFT BSPC  &lt FUN DEL     &to NUM                 &kp C_PLAY      &lt NAV ENTER   &mt RSHFT SPACE &mt RGUI ESC
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -41,7 +41,7 @@
                 &kp F2          &kp F3          &kp F4          &kp F5          &kp F6                  &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
                 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT               &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR
                 &kp F1          &kp F12         &kp PIPE        &kp PSCRN       &kp LC(PSCRN)           &kp TILDE       &kp UNDER       &kp PLUS        &kp LBKT        &kp RBKT
-                                &kp TAB         &kp BSPC        &kp DEL         &trans                  &trans          &kp ENTER       &caps_word      &kp ESC
+                                &kp TAB         &kp BSPC        &trans          &trans                  &trans          &mo EXT         &caps_word      &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -51,7 +51,7 @@
                 &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                  &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
                 &kp LCTRL       &kp LBRC        &kp RBRC        &kp PG_UP       &kp HOME                &kp BSLH        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT
                 &kp LSHFT       &kp LBKT        &kp RBKT        &kp PG_DN       &kp END					&kp GRAVE       &kp MINUS       &kp EQUAL       &kp COLON       &kp SEMI
-                                &kp TAB         &caps_word      &kp DEL         &trans                  &trans          &kp ENTER       &kp SPACE       &kp ESC
+                                &kp TAB         &caps_word      &mo EXT         &trans                  &trans          &trans          &kp SPACE       &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };		
@@ -61,8 +61,8 @@
             bindings = <
                 &bootloader     &none           &kp UP          &none           &kp INSERT              &none           &none           &none           &none           &bootloader
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PAUSE_BREAK         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
-                &none           &none           &none           &none           &kp SCROLLLOCK          &kp RG(L)       &none           &none           &none           &bt BT_CLR
-                                &kp TAB         &kp BSPC        &kp DEL         &trans                  &trans          &kp ENTER       &kp SPACE       &kp ESC
+                &none           &none           &none           &none           &kp SCROLLLOCK          &kp RCA(L)       &none           &none           &none           &bt BT_CLR
+                                &kp TAB         &kp BSPC        &trans          &trans                  &trans          &trans          &kp SPACE       &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -110,6 +110,8 @@
             key-positions = <27 28>;
             bindings = <&kp RBKT>;
         };
+        
+        
         combo_PREV {
             timeout-ms = <50>;
             key-positions = <1 2>;
@@ -130,6 +132,8 @@
             key-positions = <15 25>;
             bindings = <&kp UNDER>;
         };
+
+
         combo_SEMI {
             timeout-ms = <50>;
             key-positions = <18 19>;
@@ -154,6 +158,33 @@
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp RC(V)>;
+        };
+
+        
+        combo_LESC {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_RESC {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp ESC>;
+        };
+        combo_CSCR {
+            timeout-ms = <50>;
+            key-positions = <2 12>;
+            bindings = <&kp LC(PSCRN)>;
+        };
+        combo_PSCR {
+            timeout-ms = <50>;
+            key-positions = <3 13>;
+            bindings = <&kp PSCRN>;
+        };
+        combo_CTAB {
+            timeout-ms = <50>;
+            key-positions = <4 14>;
+            bindings = <&kp LCS(T)>;
         };
     };
 };
