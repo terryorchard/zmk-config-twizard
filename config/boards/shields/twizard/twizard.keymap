@@ -31,7 +31,7 @@
                 &kp Q           &kp W           &kp E           &kp R           &kp T                   &kp Y           &kp U           &kp I           &kp O           &kp P
                 &kp A           &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G                   &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &kp SQT
                 &lt NAV Z       &kp X           &kp C           &kp V           &kp B                   &kp N           &kp M           &kp COMMA       &kp DOT         &lt NUM FSLH
-                                &mt LGUI TAB    &mt LSHFT BSPC  &lt FUN DEL     &to NUM                 &kp C_PLAY      &lt NAV ENTER   &mt RSHFT SPACE &mt RGUI ESC
+                                &mt LGUI TAB    &lt FUN BSPC    &lt EXT DEL     &to NUM                 &kp C_PLAY      &lt EXT ENTER   &lt NAV SPACE   &mt RGUI ESC
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -41,7 +41,7 @@
                 &kp F2          &kp F3          &kp F4          &kp F5          &kp F6                  &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
                 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT               &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR
                 &kp F1          &kp F12         &kp PIPE        &kp PSCRN       &kp LC(PSCRN)           &kp TILDE       &kp UNDER       &kp PLUS        &kp LBKT        &kp RBKT
-                                &kp TAB         &kp BSPC        &trans          &trans                  &trans          &mo EXT         &caps_word      &kp ESC
+                                &kp TAB         &trans          &trans          &trans                  &trans          &caps_word      &mo EXT         &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -51,7 +51,7 @@
                 &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                  &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
                 &kp LCTRL       &kp LBRC        &kp RBRC        &kp PG_UP       &kp HOME                &kp BSLH        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT
                 &kp LSHFT       &kp LBKT        &kp RBKT        &kp PG_DN       &kp END					&kp GRAVE       &kp MINUS       &kp EQUAL       &kp COLON       &kp SEMI
-                                &kp TAB         &caps_word      &mo EXT         &trans                  &trans          &trans          &kp SPACE       &kp ESC
+                                &kp TAB         &mo EXT         &caps_word      &trans                  &trans          &trans          &kp SPACE       &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };		
@@ -59,9 +59,9 @@
 
         ext_layer {
             bindings = <
-                &bootloader     &none           &kp UP          &none           &kp INSERT              &none           &none           &none           &none           &bootloader
+                &bootloader     &kp LC(W)       &kp UP          &kp ENTER       &kp INSERT              &none           &none           &none           &none           &bootloader
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PAUSE_BREAK         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
-                &none           &none           &none           &none           &kp SCROLLLOCK          &kp RC(RA(L))   &none           &none           &none           &bt BT_CLR
+                &kp K_SLEEP     &kp F13         &kp F14         &kp F15         &kp RC(RA(L))           &kp RC(RA(L))   &none           &none           &none           &bt BT_CLR
                                 &kp TAB         &kp BSPC        &trans          &trans                  &trans          &trans          &kp SPACE       &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -69,7 +69,7 @@
 
         num_layer {
             bindings = <
-                &none           &none           &kp UP          &none           &kp KP_NUM              &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MINUS
+                &none           &none           &kp UP          &kp SLCK        &kp KP_NUM              &kp KP_DIVIDE   &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MINUS
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &none                   &kp KP_MULTIPLY &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS
                 &none           &none           &none           &none           &none                   &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_ENTER
                                 &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp KP_DOT      &kp LALT        &kp COLON
