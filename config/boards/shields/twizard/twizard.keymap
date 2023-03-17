@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define TTERM   350
+#define TTERM   275
 #define DEFAULT 0
 #define FUN     1
 #define NAV     2
@@ -17,11 +17,22 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <TTERM>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <TTERM>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
     };
+    
     
     keymap {
         compatible = "zmk,keymap";
@@ -58,7 +69,7 @@
 
 
         ext_layer {
-            bindings = <
+            bindings = 00<
                 &bootloader     &kp LC(W)       &kp UP          &kp ENTER       &kp INSERT              &none           &none           &none           &none           &bootloader
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PAUSE_BREAK         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
                 &kp K_SLEEP     &kp F13         &kp F14         &kp F15         &kp RC(RA(L))           &kp RC(RA(L))   &none           &none           &none           &bt BT_CLR
