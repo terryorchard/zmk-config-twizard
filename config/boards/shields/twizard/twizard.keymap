@@ -69,7 +69,7 @@
 
 
         ext_layer {
-            bindings = 00<
+            bindings = <
                 &bootloader     &kp LC(W)       &kp UP          &kp ENTER       &kp INSERT              &none           &none           &none           &none           &bootloader
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PAUSE_BREAK         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
                 &kp K_SLEEP     &kp F13         &kp F14         &kp F15         &kp RC(RA(L))           &kp RC(RA(L))   &none           &none           &none           &bt BT_CLR
