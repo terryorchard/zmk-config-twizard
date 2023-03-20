@@ -199,6 +199,11 @@
         };
 
         
+        combo_KENT {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp ENTER>;
+        };
         combo_KTAB {
             timeout-ms = <50>;
             key-positions = <10 11>;
