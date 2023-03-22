@@ -8,6 +8,7 @@
 #define NAV     2
 #define EXT     3
 #define NUM     4
+#define CMK     5
 
 &mt { tapping-term-ms = <TTERM>; };
 / {
@@ -42,7 +43,7 @@
                 &kp Q           &kp W           &kp E           &kp R           &kp T                   &kp Y           &kp U           &kp I           &kp O           &kp P
                 &kp A           &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G                   &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &kp SQT
                 &lt NAV Z       &kp X           &kp C           &kp V           &kp B                   &kp N           &kp M           &kp COMMA       &kp DOT         &lt NUM FSLH
-                                &mt LGUI TAB    &lt FUN BSPC    &lt EXT DEL     &to NUM                 &kp C_PLAY      &lt EXT ENTER   &lt NAV SPACE   &mt RGUI ESC
+                                &kp TAB         &lt FUN BSPC    &lt EXT DEL     &to NUM                 &kp C_PLAY      &mt RGUI ENTER  &lt NAV SPACE   &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -70,7 +71,7 @@
 
         ext_layer {
             bindings = <
-                &bootloader     &kp LC(W)       &kp UP          &kp ENTER       &kp INSERT              &none           &none           &none           &none           &bootloader
+                &bootloader     &kp LC(W)       &kp UP          &kp ENTER       &kp INSERT              &to CMK         &none           &none           &none           &bootloader
                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PAUSE_BREAK         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
                 &kp K_SLEEP     &kp F13         &kp F14         &kp F15         &kp RC(RA(L))           &kp RC(RA(L))   &none           &none           &none           &bt BT_CLR
                                 &kp TAB         &kp BSPC        &trans          &trans                  &trans          &trans          &kp SPACE       &kp ESC
@@ -86,6 +87,16 @@
                                 &kp TAB         &kp BSPC        &kp DEL         &to DEFAULT             &trans          &kp KP_DOT      &kp LALT        &kp COLON
             >;
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+        
+        cmk_layer {
+            bindings = <
+                &kp Q           &kp W           &kp F           &kp P           &kp B                   &kp J           &kp L           &kp U           &kp Y           &kp SQT
+                &kp A           &mt LALT R      &mt LCTRL S     &mt LSHFT T     &kp G                   &kp M           &mt RSHFT N     &mt RCTRL E     &mt RALT I      &kp O
+                &lt NAV Z       &kp X           &kp C           &kp D           &kp V                   &kp K           &kp H           &kp COMMA       &kp DOT         &lt NUM FSLH
+                                &kp TAB         &lt FUN BSPC    &lt EXT DEL     &to DEFAULT             &kp C_PLAY      &mt RGUI ENTER  &lt NAV SPACE   &kp ESC
+            >;
+            sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB) &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 
